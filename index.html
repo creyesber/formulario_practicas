@@ -4,20 +4,25 @@
   <meta charset="UTF-8">
   <title>Formulario de Prueba</title>
 
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-T9NW7KSG');
+  </script>
+  <!-- End Google Tag Manager -->
 
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-58VPCKLC');</script>
-
-
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-T9NW7KSG');</script>
-
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-58VPCKLC');
+  </script>
+  <!-- End Google Tag Manager -->
 
   <style>
     body {
@@ -112,26 +117,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .volver-btn:hover {
       background-color: #5a6268;
     }
-
-    #novedades {
-      display: none;
-      margin-top: 10px;
-      color: #007bff;
-      font-weight: bold;
-    }
   </style>
 </head>
 <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T9NW7KSG"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
 
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-58VPCKLC"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T9NW7KSG"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-  
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-58VPCKLC"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
   <div class="contenedor">
     <h2>Formulario de contacto</h2>
 
@@ -144,12 +146,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <label for="telefono">Teléfono:</label>
       <input type="tel" id="telefono" name="telefono" required>
-
-      <label>
-        <input type="checkbox" id="suscribirse"> Quiero recibir novedades
-      </label>
-
-      <div id="novedades">Gracias por suscribirte 📨</div>
 
       <button type="submit">Enviar</button>
     </form>
@@ -164,15 +160,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a href="tel:+34123456789">Llamar al +34 123 456 789</a><br>
       <a href="mailto:info@ejemplo.com">Escribir a info@ejemplo.com</a>
     </div>
-
-    <hr>
-
-    <button id="info-btn" class="accion-especial" style="margin-top: 20px; width: 100%; background-color: #28a745;">Solicitar más información</button>
-
-    <input type="number" id="valor" placeholder="Introduce valor estimado" style="width:100%; margin-top:15px;">
-    <button id="calcular-btn" style="margin-top:10px; width: 100%; background-color: #17a2b8;">Calcular</button>
-
-    <a href="https://www.google.com" id="redirigir" class="btn" style="display:block; margin-top:15px; text-align:center; color:#007bff; text-decoration:none;">Ir a Google</a>
   </div>
 
   <script>
@@ -199,43 +186,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       formulario.style.display = 'block';
       mensajeGracias.style.display = 'none';
     }
-
-    document.getElementById("info-btn").addEventListener("click", function () {
-      dataLayer.push({
-        event: "info_solicitada",
-        infoCategory: "formulario_extra",
-        infoTipoUsuario: "interesado"
-      });
-    });
-
-    document.getElementById("suscribirse").addEventListener("change", function (e) {
-      const novedades = document.getElementById("novedades");
-      if (e.target.checked) {
-        novedades.style.display = "block";
-        dataLayer.push({
-          event: "suscripcion_activada",
-          tipoSuscripcion: "novedades"
-        });
-      } else {
-        novedades.style.display = "none";
-      }
-    });
-
-    document.getElementById("calcular-btn").addEventListener("click", function () {
-      const valor = document.getElementById("valor").value;
-      dataLayer.push({
-        event: "valor_calculado",
-        valorEstimado: valor
-      });
-    });
-
-    document.getElementById("redirigir").addEventListener("click", function (e) {
-      e.preventDefault();
-      dataLayer.push({ event: "clic_redireccion", destino: "Google" });
-      setTimeout(function () {
-        window.location.href = "https://www.google.com";
-      }, 2000);
-    });
   </script>
 </body>
 </html>
+
+
